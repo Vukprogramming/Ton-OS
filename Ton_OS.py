@@ -143,7 +143,22 @@ def OpenMyPC():
         SYS_Error_label.place(x=300, y=50)
 
         SYS_Run_scan_button = tk.Button(System, text="Run scan", font=("Arial", 28), bg="#6b6b6b", activebackground="#949494", command=run_scan)
-        SYS_Run_scan_button.place(x=350, y=250)
+        SYS_Run_scan_button.place(x=350, y=150)
+
+        SYS_Check_info = tk.Button(System, text="System info", font=("Arial", 28), bg="#6b6b6b", activebackground="#949494", command=check_sysinfo)
+        SYS_Check_info.place(x=335, y=280)
+
+    def check_sysinfo():
+        System_info = tk.Toplevel()
+        System_info.title("System info")
+        System_info.geometry("900x600")
+        System_info.config(bg="#696969")
+        System_info.resizable(False, False)
+        center_window(System_info, 900, 600)
+
+        UI_SYS_INF_label = tk.Label(System_info, text="", font=("Arial", 24), width=46, height=16, bg="#3d3d3d")
+        UI_SYS_INF_label.lower()
+        UI_SYS_INF_label.place(x=10, y=10)
 
     def openDrivers():
         Drivers = tk.Toplevel()
