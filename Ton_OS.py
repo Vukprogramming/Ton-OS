@@ -302,6 +302,6 @@ boot_text.after(8000, dot4_update)
 boot_text.after(10000, delete_boot_text)
 root.after(13000, showbootlogo)
 root.after(17000, desbootlogo)
-root.after(1700, boot)
+root.after(17500, boot)
 
 root.mainloop()
